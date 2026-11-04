@@ -1,0 +1,55 @@
+---
+title: "qrough example"
+format:
+  qrough-revealjs:
+    mainfont: Excalifont   # any installed font; qrough does not set fonts
+    qrough:
+      roughness: 2         # how sketchy the lines are (0 = straight)
+      bowing: 1            # how much lines curve between end points
+      stroke-width: 1.5    # outline width in px
+      fill-style: solid    # hachure, solid, zigzag, cross-hatch, dots, dashed, zigzag-line
+      hachure-gap: 6       # spacing between fill lines (4 x stroke-width)
+      hachure-angle: -41   # angle of the fill lines, in degrees
+      fill-weight: 0.75    # thickness of the fill lines (stroke-width / 2)
+      seed: 42             # base seed; fixed so shapes don't jitter on redraw
+      callouts: true       # patch callouts
+---
+
+## Hand-drawn callouts
+
+::: {.callout-important title="Full width"}
+A callout across the whole slide, above the columns.
+:::
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.callout-note title="Note"}
+Default appearance.
+:::
+
+::: {.callout-tip title="Tip"}
+Tip body.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-caution title="Caution"}
+Caution body.
+:::
+
+::: {.callout-warning title="Warning"}
+Warning body.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-note appearance="simple"}
+## Simple
+Simple appearance.
+:::
+
+::: {.callout-tip appearance="minimal"}
+Minimal appearance.
+:::
+:::
+::::

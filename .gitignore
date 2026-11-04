@@ -1,0 +1,11 @@
+# Rendered test output (never published by `quarto add`, but keep it out of git)
+/.quarto/
+/*.html
+/*_files/
+/*.pdf
+.DS_Store
+
+# Personal Claude Code permissions
+/.claude
+CLAUDE.md
+**/*.quarto_ipynb

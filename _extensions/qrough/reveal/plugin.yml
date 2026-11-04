@@ -1,0 +1,3 @@
+name: QRough
+script:
+  - qrough-reveal.js

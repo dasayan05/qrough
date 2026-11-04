@@ -1,0 +1,20 @@
+---
+title: "My hand-drawn deck"
+format:
+  qrough-revealjs:
+    mainfont: Excalifont  # install it from https://plus.excalidraw.com/excalifont
+---
+
+## A first slide
+
+::: {.callout-note}
+## A note
+Callout borders and header fills are drawn with rough.js.
+:::
+
+## Another slide
+
+::: {.callout-tip}
+## Tip
+See the qrough README for the options you can set under `qrough:`.
+:::
