@@ -4,6 +4,8 @@ A Quarto extension that gives **revealjs presentations** an Excalidraw-style,
 hand-drawn look. It adds no new markup: Quarto's own slide elements are redrawn
 in the browser with [rough.js](https://roughjs.com).
 
+![A qrough slide: a hatched title band, a sketched note callout and warning callout, and inline text that is underlined, circled, boxed, highlighted and struck through](images/screenshot.png)
+
 qrough only supports revealjs. Other formats are left untouched, and HTML
 documents get a render warning.
 
@@ -19,13 +21,13 @@ it wraps onto several lines.
 ## Install
 
 ```bash
-quarto add <path-or-repo>/qrough
+quarto add dasayan05/qrough
 ```
 
 Or start a new deck from the bundled template:
 
 ```bash
-quarto use template <repo>/qrough
+quarto use template dasayan05/qrough
 ```
 
 ### Font
@@ -40,8 +42,27 @@ format:
     mainfont: Excalifont
 ```
 
-Anyone viewing the deck needs the font installed too, otherwise the browser
-falls back to its default font.
+`mainfont` only names the font; it does not embed it in the rendered deck.
+The font has to be installed on the computer that *views* the deck, not just
+the one that renders it. That is fine when you present from your own laptop,
+but anyone else who opens the HTML (a shared link, a published deck, a
+colleague's machine) without Excalifont installed sees the browser's default
+font instead, usually a serif such as Times. The rough.js drawings still
+appear; only the lettering changes.
+
+To give a fallback, list several fonts. The browser uses the first one it
+has:
+
+```yaml
+format:
+  qrough-revealjs:
+    mainfont: "Excalifont, 'Comic Sans MS', cursive"
+```
+
+To make the font travel with the deck, serve it as a web font instead: put
+the font file next to your deck and load it with an `@font-face` rule in a
+custom CSS file (`css: fonts.css`). Check the font's licence before you
+publish its file.
 
 ## Use
 

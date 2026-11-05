@@ -5,6 +5,7 @@
 /*.pdf
 .DS_Store
 
-# Personal Claude Code permissions
+# Claude Code files stay local
 /.claude
+/CLAUDE.md
 **/*.quarto_ipynb
