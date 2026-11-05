@@ -7,5 +7,4 @@
 
 # Personal Claude Code permissions
 /.claude
-CLAUDE.md
 **/*.quarto_ipynb
