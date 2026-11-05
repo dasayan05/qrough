@@ -1,0 +1,5 @@
+/* qrough element: slide titles. A little room so the fill band does not hug the text. */
+
+html.qrough .reveal .slides section.slide > h2.qrough-host {
+  padding: 0.15em 0.3em;
+}

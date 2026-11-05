@@ -1,0 +1,24 @@
+/*
+ * qrough core: place the rough.js overlay behind each patched element.
+ * Everything is scoped to `html.qrough`, which the runtime sets once it has
+ * drawn, so decks without JS keep Quarto's normal look. Element-specific rules
+ * (hiding native borders/backgrounds) live in `elements/<name>.css`.
+ */
+
+html.qrough .qrough-host {
+  position: relative;
+  isolation: isolate; /* keeps the z-index:-1 overlay inside the host */
+}
+
+.qrough-overlay {
+  position: absolute;
+  top: -6px; /* matches PAD in core.js */
+  left: -6px;
+  z-index: -1;
+  overflow: visible;
+  pointer-events: none;
+}
+
+html:not(.qrough) .qrough-overlay {
+  display: none;
+}

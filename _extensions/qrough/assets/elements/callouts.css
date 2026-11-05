@@ -1,0 +1,10 @@
+/* qrough element: callouts. Keep border widths (so layout does not shift), drop the colours. */
+
+html.qrough div.callout.qrough-host {
+  border-color: transparent !important;
+  background-color: transparent;
+}
+
+html.qrough div.callout.qrough-host > .callout-body > .callout-title {
+  background-color: transparent !important;
+}

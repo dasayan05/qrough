@@ -8,7 +8,9 @@ qrough only supports revealjs. Other formats are left untouched, and HTML
 documents get a render warning.
 
 Version 0.1 patches **callouts** (all types, `default`/`simple`/`minimal`
-appearances, nested, and callouts inside columns and fragments).
+appearances, nested, and callouts inside columns and fragments) and
+**slide titles** (a full-width hand-drawn band behind each `##` title, in
+the theme's accent colour).
 
 ## Install
 
@@ -60,20 +62,14 @@ overview and `?print-pdf` mode.
 
 ## Options
 
-Put these under `qrough:`, either nested in the format (as above) or at the
-top level of the document:
+Every supported element is restyled; the look of each one is fixed by qrough.
+Only two options can be set, under `qrough:`, either nested in the format (as
+above) or at the top level of the document:
 
 ```yaml
 qrough:
-  roughness: 1.2       # rough.js roughness (default 1)
-  bowing: 1            # rough.js bowing (default 1)
-  stroke-width: 1.5    # outline width in px
-  fill-style: hachure  # header fill: hachure, solid, zigzag, cross-hatch, dots, dashed, zigzag-line
-  hachure-gap: 6       # spacing between hachure lines
-  hachure-angle: -41
-  fill-weight: 0.75
+  roughness: 1.2       # how sketchy the lines are (default 1, 0 = straight)
   seed: 42             # base seed; fixed so shapes do not jitter on redraw
-  callouts: true       # patch callouts
 ```
 
 Colours come from the active reveal theme. Without JavaScript the deck falls

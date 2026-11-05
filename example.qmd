@@ -1,25 +1,15 @@
 ---
-title: "qrough example"
+title: "qRough"
+subtitle: "A Quarto-Reveal.js format for hand-drawn slides, powered by Rough.js"
 format:
   qrough-revealjs:
     mainfont: Excalifont   # any installed font; qrough does not set fonts
     qrough:
       roughness: 2         # how sketchy the lines are (0 = straight)
-      bowing: 1            # how much lines curve between end points
-      stroke-width: 1.5    # outline width in px
-      fill-style: solid    # hachure, solid, zigzag, cross-hatch, dots, dashed, zigzag-line
-      hachure-gap: 6       # spacing between fill lines (4 x stroke-width)
-      hachure-angle: -41   # angle of the fill lines, in degrees
-      fill-weight: 0.75    # thickness of the fill lines (stroke-width / 2)
       seed: 42             # base seed; fixed so shapes don't jitter on redraw
-      callouts: true       # patch callouts
 ---
 
 ## Hand-drawn callouts
-
-::: {.callout-important title="Full width"}
-A callout across the whole slide, above the columns.
-:::
 
 :::: {.columns}
 ::: {.column width="33%"}
@@ -53,3 +43,9 @@ Minimal appearance.
 :::
 :::
 ::::
+
+## Text styling
+
+<br>
+
+Hello, this is a **bold** text, and this is *italic* text. You can also have `inline code` in your text.
