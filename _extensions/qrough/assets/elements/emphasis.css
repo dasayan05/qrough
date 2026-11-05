@@ -1,0 +1,5 @@
+/* qrough element: emphasis. Room so the ellipse does not run over neighbouring words. */
+
+html.qrough .reveal .slides em.qrough-emphasis {
+  padding: 0 0.2em;
+}

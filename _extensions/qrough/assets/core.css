@@ -22,3 +22,8 @@ html.qrough .qrough-host {
 html:not(.qrough) .qrough-overlay {
   display: none;
 }
+
+/* Text patchers (`text: true`) can also draw above the text, e.g. strikethrough. */
+.qrough-overlay.qrough-front {
+  z-index: 1;
+}

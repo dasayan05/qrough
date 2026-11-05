@@ -1,0 +1,5 @@
+/* qrough element: strikethrough. The rough line replaces the native one. */
+
+html.qrough .reveal .slides del.qrough-strikethrough {
+  text-decoration: none;
+}

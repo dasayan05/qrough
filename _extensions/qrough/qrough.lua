@@ -6,7 +6,7 @@ qrough only supports revealjs; other formats are left untouched.
 
 -- Element types, each with `assets/elements/<name>.js` and `<name>.css`.
 -- Every element is always patched.
-local ELEMENTS = { "callouts", "slide-titles" }
+local ELEMENTS = { "callouts", "slide-titles", "inline-code", "emphasis", "strong", "strikethrough" }
 
 -- The only user options: `qrough: { roughness, seed }`. Everything else about
 -- an element's look is fixed in its own JS file.

@@ -1,0 +1,7 @@
+/* qrough element: inline code. The highlight replaces Quarto's background. */
+
+html.qrough .reveal .slides code.qrough-inline-code {
+  background: none;
+  border: none;
+  padding: 0 0.15em;
+}

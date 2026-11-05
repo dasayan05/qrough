@@ -9,43 +9,25 @@ format:
       seed: 42             # base seed; fixed so shapes don't jitter on redraw
 ---
 
-## Hand-drawn callouts
+## Quarto-Reveal.js + Rough.js {.smaller}
+
+<br />
 
 :::: {.columns}
-::: {.column width="33%"}
+::: {.column width="55%"}
+- A bold phrase that is **long enough to wrap onto** the next line
+- Some *italic* text and a `code` span
+- ~~Struck out~~ and `x <- 1`
+:::
+
+::: {.column width="45%"}
 ::: {.callout-note title="Note"}
-Default appearance.
+A **default** callout with *italic* and `code`.
 :::
 
-::: {.callout-tip title="Tip"}
-Tip body.
-:::
-:::
-
-::: {.column width="33%"}
-::: {.callout-caution title="Caution"}
-Caution body.
-:::
-
-::: {.callout-warning title="Warning"}
-Warning body.
-:::
-:::
-
-::: {.column width="33%"}
-::: {.callout-note appearance="simple"}
-## Simple
-Simple appearance.
-:::
-
-::: {.callout-tip appearance="minimal"}
-Minimal appearance.
+::: {.callout-warning appearance="simple"}
+## Simple warning
+Even ~~plain~~ **simple** ones get *sketched*.
 :::
 :::
 ::::
-
-## Text styling
-
-<br>
-
-Hello, this is a **bold** text, and this is *italic* text. You can also have `inline code` in your text.
