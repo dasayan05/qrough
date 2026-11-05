@@ -11,7 +11,8 @@ Version 0.1 patches **callouts** (all types, `default`/`simple`/`minimal`
 appearances, nested, and callouts inside columns and fragments) and
 **slide titles** (a full-width hand-drawn band behind each `##` title, in
 the theme's accent colour). It also marks up inline text: `inline code` gets a
-light hand-drawn highlight, *italic* text is circled, **bold** text is boxed,
+light hand-drawn highlight, *italic* text is circled, **bold** text is underlined,
+***bold italic*** text is boxed,
 and ~~strikethrough~~ gets a rough line across it, all following the text when
 it wraps onto several lines.
 

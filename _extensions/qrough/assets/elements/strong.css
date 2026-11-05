@@ -1,5 +1,1 @@
-/* qrough element: strong. Room so the rectangle does not touch neighbouring words. */
-
-html.qrough .reveal .slides strong.qrough-strong {
-  padding: 0 0.15em;
-}
+/* qrough element: strong. The underline needs no layout changes. */

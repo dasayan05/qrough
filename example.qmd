@@ -16,7 +16,7 @@ format:
 :::: {.columns}
 ::: {.column width="55%"}
 - A bold phrase that is **long enough to wrap onto** the next line
-- Some *italic* text and a `code` span
+- Some *italic* text, ***bold italic*** and a `code` span
 - ~~Struck out~~ and `x <- 1`
 :::
 

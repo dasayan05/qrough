@@ -17,6 +17,7 @@
     name: "emphasis",
     selector: ".reveal .slides em:not(.callout-title em)",
     text: true,
+    match: function (el) { return !window.qrough.isBoldItalic(el); }, // boxed instead
     rough: ROUGH,
 
     readStyle: function () {

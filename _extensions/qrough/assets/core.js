@@ -15,7 +15,8 @@
  * such elements share one overlay on their nearest block ancestor (p, li,
  * h2...), and `draw` gets `ctx.rects`: one box per line fragment, in the
  * block's layout pixels. With `front: true` the patcher draws into a second
- * overlay above the text instead of behind it. Native borders/backgrounds are hidden by the element
+ * overlay above the text instead of behind it. An optional `match(el)` filters
+ * the selector's matches; elements it rejects stay free for other patchers. Native borders/backgrounds are hidden by the element
  * CSS, scoped to `html.qrough`, so decks without JS keep Quarto's look.
  * Drawing follows the Reveal lifecycle through the qrough revealjs plugin.
  */
@@ -152,6 +153,16 @@
     resizeObserver.observe(host);
   }
 
+  // True when `el` (an em or strong) and a strong/em directly around or inside
+  // it wrap exactly the same text, i.e. Markdown `***text***`.
+  function isBoldItalic(el) {
+    const other = el.tagName === "EM" ? "STRONG" : "EM";
+    const parent = el.parentElement;
+    if (parent && parent.tagName === other && parent.textContent === el.textContent) return true;
+    const child = el.firstElementChild;
+    return !!child && child.tagName === other && child.textContent === el.textContent;
+  }
+
   // Nearest ancestor that lays out as a block (not `display: inline`).
   function blockOf(el) {
     let node = el.parentElement;
@@ -166,6 +177,7 @@
   // Returns the new item, or null if `el` is skipped or already patched.
   function patchText(el, patcher) {
     if (textItems.has(el)) return null;
+    if (patcher.match && !patcher.match(el)) return null;
     textItems.add(el);
     if (el.closest("svg")) return null; // e.g. labels inside diagrams
     const block = blockOf(el);
@@ -330,6 +342,7 @@
     redraw: redraw,
     attachReveal: attachReveal,
     themeColor: themeColor,
+    isBoldItalic: isBoldItalic,
   };
 
   if (document.readyState === "loading") {

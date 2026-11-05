@@ -1,0 +1,5 @@
+/* qrough element: strong emphasis. Room so the box does not touch neighbouring words. */
+
+html.qrough .reveal .slides strong.qrough-strong-emphasis {
+  padding: 0 0.15em;
+}
