@@ -1,0 +1,6 @@
+/* qrough element: tables. Keep the rule widths (so layout does not shift), drop their colour. */
+
+html.qrough .reveal table.qrough-host > * > tr > th,
+html.qrough .reveal table.qrough-host > * > tr > td {
+  border-bottom-color: transparent !important;
+}

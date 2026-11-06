@@ -14,13 +14,13 @@ format:
 <br />
 
 :::: {.columns}
-::: {.column width="55%"}
+::: {.column width="50%"}
 - A bold phrase that is **long enough to wrap onto** the next line
 - Some *italic* text, ***bold italic*** and a `code` span
 - ~~Struck out~~ and `x <- 1`
 :::
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 ::: {.callout-note title="Note"}
 A **default** callout with *italic* and `code`.
 :::
@@ -43,6 +43,15 @@ plt.plot(x, np.sin(x))
 plt.title("A simple plot")
 plt.show()
 ```
+:::
+
+::: {.column width="50%"}
+<center>
+| Element  | Sketch     | Done |
+|----------|------------|:----:|
+| Callouts | outline    | yes  |
+| Code     | outline    | yes  |
+</center>
 :::
 
 ::::

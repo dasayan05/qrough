@@ -14,7 +14,7 @@ documents get a render warning.
 
 ## Example
 
-![A qrough slide: a hatched title band, a sketched note callout and warning callout, inline text that is underlined, circled, boxed, highlighted and struck through, and a code block with a rough outline](images/screenshot.png)
+![A qrough slide: a hatched title band, a sketched note callout and warning callout, inline text that is underlined, circled, boxed, highlighted and struck through, a code block with a rough outline, and a table with rough rules and a cross-hatched header](images/screenshot.png)
 
 The slide above (shown after the deck's title slide) is rendered from
 [`example.qmd`](example.qmd):
@@ -39,13 +39,13 @@ format:
 <br />
 
 :::: {.columns}
-::: {.column width="55%"}
+::: {.column width="50%"}
 - A bold phrase that is **long enough to wrap onto** the next line
 - Some *italic* text, ***bold italic*** and a `code` span
 - ~~Struck out~~ and `x <- 1`
 :::
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 ::: {.callout-note title="Note"}
 A **default** callout with *italic* and `code`.
 :::
@@ -70,6 +70,15 @@ plt.show()
 ```
 :::
 
+::: {.column width="50%"}
+<center>
+| Element  | Sketch     | Done |
+|----------|------------|:----:|
+| Callouts | outline    | yes  |
+| Code     | outline    | yes  |
+</center>
+:::
+
 ::::
 ````
 
@@ -87,7 +96,7 @@ plt.show()
 - [x] **Bold italic**: boxed
 - [x] **Strikethrough**: a rough line across the text
 - [x] **Code blocks**: a rough outline in place of the thin border
-- [ ] Tables
+- [x] **Tables**: rough row rules and a cross-hatched header band; `.striped` tables get cross-hatched stripes
 - [ ] Figures
 
 Inline marks follow the text when it wraps onto several lines.
