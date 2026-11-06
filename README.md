@@ -14,7 +14,10 @@ documents get a render warning.
 
 ## Example
 
-This deck ([`example.qmd`](example.qmd)):
+![A qrough slide: a hatched title band, a sketched note callout and warning callout, and inline text that is underlined, circled, boxed, highlighted and struck through](images/screenshot.png)
+
+The slide above (shown after the deck's title slide) is rendered from
+[`example.qmd`](example.qmd):
 
 ```markdown
 ---
@@ -51,10 +54,6 @@ Even ~~plain~~ **simple** ones get *sketched*.
 :::
 ::::
 ```
-
-renders to this slide (shown after the deck's title slide):
-
-![A qrough slide: a hatched title band, a sketched note callout and warning callout, and inline text that is underlined, circled, boxed, highlighted and struck through](images/screenshot.png)
 
 ## What gets sketched
 
