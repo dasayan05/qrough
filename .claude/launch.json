@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "example",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "exec quarto preview example.qmd --port 4321 --no-browser"
+      ],
+      "port": 4321
+    }    
+  ]
+}

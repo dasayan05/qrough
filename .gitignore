@@ -6,6 +6,5 @@
 .DS_Store
 
 # Claude Code files stay local
-/.claude
-/CLAUDE.md
+/.claude/settings.local.json
 **/*.quarto_ipynb
