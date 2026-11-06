@@ -1,22 +1,77 @@
 # qrough
 
-A Quarto extension that gives **revealjs presentations** an Excalidraw-style,
-hand-drawn look. It adds no new markup: Quarto's own slide elements are redrawn
-in the browser with [rough.js](https://roughjs.com).
+A Quarto extension for **hand-drawn revealjs presentations**. Write your
+slides as usual and qrough gives them a sketchy, Excalidraw-style look, as if
+the deck had been drawn on a whiteboard.
+
+qrough adds no new syntax. It takes the elements Quarto already produces and
+redraws their borders, fills and highlights in the browser with
+[rough.js](https://roughjs.com), so any existing deck can switch to it by
+changing a single line of front matter, and switch back just as easily.
+
+qrough supports revealjs only. Other formats are left untouched, and HTML
+documents get a render warning.
+
+## Example
+
+This deck ([`example.qmd`](example.qmd)):
+
+```markdown
+---
+title: "qRough"
+subtitle: "A Quarto-Reveal.js format for hand-drawn slides, powered by Rough.js"
+format:
+  qrough-revealjs:
+    mainfont: Excalifont   # any installed font; qrough does not set fonts
+    qrough:
+      roughness: 2         # how sketchy the lines are (0 = straight)
+      seed: 42             # base seed; fixed so shapes don't jitter on redraw
+---
+
+## Quarto-Reveal.js + Rough.js {.smaller}
+
+<br />
+
+:::: {.columns}
+::: {.column width="55%"}
+- A bold phrase that is **long enough to wrap onto** the next line
+- Some *italic* text, ***bold italic*** and a `code` span
+- ~~Struck out~~ and `x <- 1`
+:::
+
+::: {.column width="45%"}
+::: {.callout-note title="Note"}
+A **default** callout with *italic* and `code`.
+:::
+
+::: {.callout-warning appearance="simple"}
+## Simple warning
+Even ~~plain~~ **simple** ones get *sketched*.
+:::
+:::
+::::
+```
+
+renders to this slide (shown after the deck's title slide):
 
 ![A qrough slide: a hatched title band, a sketched note callout and warning callout, and inline text that is underlined, circled, boxed, highlighted and struck through](images/screenshot.png)
 
-qrough only supports revealjs. Other formats are left untouched, and HTML
-documents get a render warning.
+## What gets sketched
 
-Version 0.1 patches **callouts** (all types, `default`/`simple`/`minimal`
-appearances, nested, and callouts inside columns and fragments) and
-**slide titles** (a full-width hand-drawn band behind each `##` title, in
-the theme's accent colour). It also marks up inline text: `inline code` gets a
-light hand-drawn highlight, *italic* text is circled, **bold** text is underlined,
-***bold italic*** text is boxed,
-and ~~strikethrough~~ gets a rough line across it, all following the text when
-it wraps onto several lines.
+- [x] **Slide titles**: a hand-drawn band behind each `##` title, in the
+      theme's accent colour
+- [x] **Callouts**: all types and `default`/`simple`/`minimal` appearances,
+      including nested callouts and callouts in columns and fragments
+- [x] **Inline code**: a light highlight
+- [x] **Italic**: circled
+- [x] **Bold**: underlined
+- [x] **Bold italic**: boxed
+- [x] **Strikethrough**: a rough line across the text
+- [ ] Code blocks
+- [ ] Tables
+- [ ] Figures
+
+Inline marks follow the text when it wraps onto several lines.
 
 ## Install
 
