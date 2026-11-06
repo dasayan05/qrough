@@ -1,0 +1,15 @@
+/*
+ * qrough element: code blocks. Keep the border width (so layout does not
+ * shift), drop its colour. The inner `pre` is opaque, so the outline is drawn
+ * above it. Scrolling happens on the inner `code`, so the wrapper can let the
+ * overlay overhang instead of clipping it (or growing scrollbars).
+ */
+
+html.qrough .reveal div.sourceCode.qrough-host {
+  border-color: transparent !important;
+  overflow: visible;
+}
+
+html.qrough .reveal div.sourceCode.qrough-host > .qrough-overlay {
+  z-index: 1;
+}

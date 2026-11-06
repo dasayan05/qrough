@@ -14,12 +14,15 @@ documents get a render warning.
 
 ## Example
 
-![A qrough slide: a hatched title band, a sketched note callout and warning callout, and inline text that is underlined, circled, boxed, highlighted and struck through](images/screenshot.png)
+![A qrough slide: a hatched title band, a sketched note callout and warning callout, inline text that is underlined, circled, boxed, highlighted and struck through, and a code block with a rough outline](images/screenshot.png)
 
 The slide above (shown after the deck's title slide) is rendered from
 [`example.qmd`](example.qmd):
 
-```markdown
+<details>
+<summary>Show the source of <code>example.qmd</code></summary>
+
+````markdown
 ---
 title: "qRough"
 subtitle: "A Quarto-Reveal.js format for hand-drawn slides, powered by Rough.js"
@@ -53,7 +56,24 @@ Even ~~plain~~ **simple** ones get *sketched*.
 :::
 :::
 ::::
+
+:::: {.columns}
+::: {.column width="50%"}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+plt.plot(x, np.sin(x))
+plt.title("A simple plot")
+plt.show()
 ```
+:::
+
+::::
+````
+
+</details>
 
 ## What gets sketched
 
@@ -66,7 +86,7 @@ Even ~~plain~~ **simple** ones get *sketched*.
 - [x] **Bold**: underlined
 - [x] **Bold italic**: boxed
 - [x] **Strikethrough**: a rough line across the text
-- [ ] Code blocks
+- [x] **Code blocks**: a rough outline in place of the thin border
 - [ ] Tables
 - [ ] Figures
 
