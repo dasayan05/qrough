@@ -14,7 +14,7 @@ documents get a render warning.
 
 ## Example
 
-![A qrough slide: a hatched title band, a sketched note callout and warning callout, inline text that is underlined, circled, boxed, highlighted and struck through, a code block with a rough outline, and a table with rough rules and a cross-hatched header](images/screenshot.png)
+![A qrough slide: a hatched title band, a sketched note callout and warning callout, inline text that is underlined, circled, boxed, highlighted and struck through, a code block with a rough outline, a table with rough rules and a cross-hatched header, and a blockquote with a rough bar](images/screenshot.png)
 
 The slide above (shown after the deck's title slide) is rendered from
 [`example.qmd`](example.qmd):
@@ -80,6 +80,8 @@ plt.show()
 :::
 
 ::::
+
+> A quote that is **long enough to wrap onto** the next line, demonstrating the text wrapping behavior in a blockquote.
 ````
 
 </details>
@@ -97,6 +99,7 @@ plt.show()
 - [x] **Strikethrough**: a rough line across the text
 - [x] **Code blocks**: a rough outline in place of the thin border
 - [x] **Tables**: rough row rules and a cross-hatched header band; `.striped` tables get cross-hatched stripes
+- [x] **Blockquotes**: a rough bar in place of the solid one on the left
 - [ ] Figures
 
 Inline marks follow the text when it wraps onto several lines.

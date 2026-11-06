@@ -1,0 +1,5 @@
+/* qrough element: blockquotes. Keep the left border width (so layout does not shift), drop its colour. */
+
+html.qrough .reveal blockquote.qrough-host {
+  border-left-color: transparent !important;
+}

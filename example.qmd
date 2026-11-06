@@ -55,3 +55,7 @@ plt.show()
 :::
 
 ::::
+
+<br />
+
+> A quote that is **long enough to wrap onto** the next line, demonstrating the text wrapping behavior in a blockquote.
